@@ -1,3 +1,4 @@
+import pandas as pd
 # Question 3
 
 # a.
@@ -22,16 +23,16 @@ df_demo_17_18 = pd.read_sas(
 '''Extracts the columns from the data.'''
 df_demo_11_12_extracted = df_demo_11_12[['SEQN', 'RIDAGEYR', 'RIDRETH3', 
     'DMDEDUC2', 'DMDMARTL', 'RIDSTATR', 'SDMVPSU', 'SDMVSTRA', 'WTMEC2YR',
-    'WTINT2YR']]
+    'WTINT2YR', 'RIAGENDR']]
 df_demo_13_14_extracted = df_demo_13_14[['SEQN', 'RIDAGEYR', 'RIDRETH3',
     'DMDEDUC2', 'DMDMARTL', 'RIDSTATR', 'SDMVPSU', 'SDMVSTRA', 'WTMEC2YR',
-    'WTINT2YR']]
+    'WTINT2YR', 'RIAGENDR']]
 df_demo_15_16_extracted = df_demo_15_16[['SEQN', 'RIDAGEYR', 'RIDRETH3',
     'DMDEDUC2', 'DMDMARTL', 'RIDSTATR', 'SDMVPSU', 'SDMVSTRA', 'WTMEC2YR',
-    'WTINT2YR']]
+    'WTINT2YR', 'RIAGENDR']]
 df_demo_17_18_extracted = df_demo_17_18[['SEQN', 'RIDAGEYR', 'RIDRETH3',
     'DMDEDUC2', 'DMDMARTL', 'RIDSTATR', 'SDMVPSU', 'SDMVSTRA', 'WTMEC2YR',
-    'WTINT2YR']]
+    'WTINT2YR', 'RIAGENDR']]
 
 
 # In[34]:
@@ -62,7 +63,8 @@ df_demo.rename(columns={'SEQN': 'unique ids', 'RIDAGEYR': 'age',
     'SDMVPSU': 'masked variance pseudo-psu',
     'SDMVSTRA': 'masked variance pseudo-stratum',
     'WTMEC2YR': 'full sample 2 year mec exam weight',
-    'WTINT2YR': 'full sample 2 year interview weight'}, inplace=True)
+    'WTINT2YR': 'full sample 2 year interview weight',
+    'RIAGENDR': 'gender'}, inplace=True)
 
 
 # In[37]:
